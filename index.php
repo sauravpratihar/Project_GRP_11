@@ -4,9 +4,15 @@
 <?php
 include 'head.php';
 
+$cnt = "";
+if($_GET['id'] == 'select'){
+    $cnt = "alertPop()";
+}
+
 ?>
 
-<body>
+
+<body onload="<?= $cnt; ?>">
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->  
@@ -43,6 +49,9 @@ include 'head.php';
 
             if($_GET['id'] == 'course')
                 include "course_comp.php";
+
+            if($_GET['id'] == 'select')
+                include "select.php";
             ?>
             <!-- PRODUCT TAB SECTION END -->
 

@@ -1,0 +1,22 @@
+<script>
+Cookies.set("mode", "lesson");
+
+var resolution = '480p';
+            var maxFrameRate =  15;
+            var maxBitRate =  750;
+
+Cookies.set("resolution", resolution);
+Cookies.set("maxFrameRate", maxFrameRate);
+Cookies.set("maxBitRate", maxBitRate);
+
+var roomName = "test";
+if(roomName) {
+    Cookies.set("roomName", roomName);
+    if (role === 'host') {
+        window.location.href="whiteboard-host.html";
+    } else {
+        window.location.href="whiteboard-guest.html";
+    }
+} 
+
+</script>
