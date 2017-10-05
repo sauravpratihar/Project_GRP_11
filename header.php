@@ -1,4 +1,7 @@
-        <header class="header-area header-wrapper">
+<?php
+
+?>
+<header class="header-area header-wrapper">
             <!-- header-top-bar -->
             <div class="header-top-bar plr-185">
                 <div class="container-fluid">
@@ -41,8 +44,10 @@
                                         
                                             <a href="index.php?id=login" style="margin-left:170px">
                                                     <i class="zmdi zmdi-lock"></i>
-                                                    Login/Register
+                                                    <?= $_SESSION['user']; ?>
+                                                    
                                             </a>
+                                            
                                             
                                             <br>
                                     <!-- header-search -->

@@ -2,12 +2,31 @@
 <html class="no-js" lang="en">
 
 <?php
+
+if(session_id()){
+    session_start();
+}
+
 include 'head.php';
 
 $cnt = "";
 if($_GET['id'] == 'select'){
     $cnt = "alertPop()";
 }
+
+
+$_SESSION['user'] = "Login/Register";
+
+if(isset($_GET['id']) && $_GET['id'] != 'login'){
+    $_SESSION['user'] = "Welcome";
+
+}
+
+if($_GET['id'] == 'logout'){
+    // $_SESSION['user'] = "Welcome";
+    session_destroy();
+}
+
 
 ?>
 
@@ -41,7 +60,7 @@ if($_GET['id'] == 'select'){
             <!-- PRODUCT TAB SECTION START -->
             <?php
 
-            if(!isset($_GET['id']))
+            if(!isset($_GET['id']) || $_GET['id'] == 1)
                 include "index_comp.php";
             
             if($_GET['id'] == 'login')

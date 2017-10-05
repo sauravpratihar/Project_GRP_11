@@ -1,3 +1,8 @@
+<?php
+
+
+?>
+
 <div class="login-section mb-80">
                 <div class="container">
                     <div class="row">
@@ -10,6 +15,8 @@
                                         <input type="text" name="name" placeholder="Email Address">
                                         <input type="password" name="password" placeholder="Password">
                                         <p><small><a href="#">Forgot our password?</a></small></p>
+                                    <input type="hidden" name="id" value="1">
+                                        
                                         <button class="submit-btn-1 btn-hover-1" type="submit">login</button>
                                     </div>
                                 </form>
@@ -65,6 +72,7 @@
                                                     <input type="checkbox" name="signup">Sign up for our newsletter!
                                                 </small>
                                             </label>
+                                    <input type="hidden" name="id" value="1">
                                         
                                         </div>
                                         <div class="row">
